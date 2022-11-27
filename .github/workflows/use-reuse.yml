@@ -64,9 +64,9 @@ jobs:
         with:
           name: dist-files
           path: dist
-  deploy:
-    needs: build
-    uses: ./.github/worklows/reusable.yml
+  # deploy:
+  #   needs: build
+  #   uses: ./.github/worklows/reusable.yml
   report:
     needs: [lint, deploy]
     if: failure()
